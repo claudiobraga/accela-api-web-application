@@ -1,0 +1,35 @@
+package com.accela.claudiobraga.coding.exercise.api.controller;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.http.HttpStatus;
+
+import io.restassured.http.ContentType;
+import io.restassured.module.mockmvc.RestAssuredMockMvc;
+
+import static io.restassured.module.mockmvc.RestAssuredMockMvc.*;
+
+@WebMvcTest
+public class PersonControllerTest {
+	
+	@Autowired
+	private PersonController personController;
+	
+	@BeforeEach
+	public void setup() {
+		standaloneSetup(this.personController);
+	}
+	
+	@Test
+	public void shouldReturnSuccess_WhenGetPerson() {
+		given()
+			.accept(ContentType.JSON)
+		.when()
+			.get("/persons")
+		.then()
+			.statusCode(HttpStatus.OK.value());
+	}
+
+}

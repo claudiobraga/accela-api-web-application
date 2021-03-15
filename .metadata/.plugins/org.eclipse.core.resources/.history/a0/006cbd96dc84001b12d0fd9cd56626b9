@@ -1,0 +1,9 @@
+package com.accela.claudiobraga.coding.exercise.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.accela.claudiobraga.coding.exercise.domain.Person;
+
+public interface PersonRepository extends JpaRepository<Person, Long>{
+
+}

@@ -1,0 +1,5 @@
+package com.accela.claudiobraga.coding.exercise.api.controller;
+
+public class PersonController {
+
+}

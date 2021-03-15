@@ -1,0 +1,5 @@
+package com.accela.claudiobraga.coding.exercise.domain.repository;
+
+public interface PersonRepository {
+
+}

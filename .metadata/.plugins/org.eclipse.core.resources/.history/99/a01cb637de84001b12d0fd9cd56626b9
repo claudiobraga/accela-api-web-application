@@ -1,0 +1,24 @@
+package com.accela.claudiobraga.coding.exercise.api.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.accela.claudiobraga.coding.exercise.domain.Person;
+import com.accela.claudiobraga.coding.exercise.repository.PersonRepository;
+
+@RestController
+@RequestMapping("/persons")
+public class PersonController {
+	
+	@Autowired
+	private PersonRepository personRepository;
+	
+	
+	public List<Person> toList(){
+		return personRepository.findAll();
+	}
+
+}
