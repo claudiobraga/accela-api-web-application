@@ -3,6 +3,7 @@ Accela Cláudio Braga Coding Exercise
 Web Application to manage people. List, insert, edit, delete and counting.
 
 Getting Started
+
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 Prerequisites
@@ -27,9 +28,13 @@ Start as a Spring Boot Application
 Running and see functionalities Working
 
 Postman / Internet browser (GET, POST, PUT, DELETE)
+
 http://localhost:8080/persons
+
 http://localhost:8080/persons/1
+
 http://localhost:8080/persons/count
+
 
 Sample JSON on Postman
 {
